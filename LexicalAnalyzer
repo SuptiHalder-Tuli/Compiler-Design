@@ -1,0 +1,149 @@
+CDlab2(1)
+#include<iostream>
+using namespace std;
+int main()
+{
+    string input;
+    cout<<"Enter your input: "<<endl;
+    cin>>input;
+    for(int i =0; i<= input.size();i++)
+    {
+        if(int(input[i])>=48 || int (input[i])<=57)
+        {
+            cout<<"Numeric constant"<<endl;
+
+
+
+        }
+        else
+        {
+            cout<<"Not numeric"<<endl;
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+CDlab2(2)
+#include<iostream>
+using namespace std;
+int main()
+{
+    string input;
+    cout<<"Enter your input: "<<endl;
+    cin>>input;
+    for(int i=0; i<=input.size(); i++)
+    {
+        switch(input[i])
+        {
+        case '+':
+            {
+                cout<<"operator: +"<<endl;
+                break;
+            }
+        case '-':
+            {
+                cout<<"operator: -"<<endl;
+                break;
+            }
+        case '*':
+            {
+                cout<<"opetator: *"<<endl;
+                break;
+            }
+        case '/':
+            {
+                cout<<"operator: /"<<endl;
+                break;
+            }
+        case '%':
+            {
+                cout<<"operator: %"<<endl;
+                break;
+            }
+        case '=':
+            {
+                cout<<"operator: ="<<endl;
+                break;
+            }
+        default:
+            {
+
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+CDlab2(3)
+#include<iostream>
+using namespace std;
+int main()
+{
+    string input;
+    cout<<"Enter your input: "<<endl;
+    cin>>input;
+    for(int i=0; i<=input.size(); i++ )
+    {
+        if(input[0]=='/' && input[1]=='/')
+        {
+            cout<<" Singleline comment "<<endl;
+            break;
+        }
+        else if((input[0]=='/' && input[1]=='*')&&(input[input.size()-2]=='*' && input[input.size()-1]))
+        {
+            cout<<"Multiline comment "<<endl;
+            break;
+        }
+
+
+        else
+        {
+            cout<<"Not a comment"<<endl;
+            break;
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+CDlab2(4)
+#include<iostream>
+using namespace std;
+int main()
+{
+    string input;
+    cout<<"Enter your input: "<<endl;
+    cin>>input;
+    for(int i=0; i<=input.size(); i++)
+    {
+        if(((input[0]>=65||input[0]<=90) || (input[0]>=97||input[0]<=122) || (input[0]==95))  && ((input[i]>=65||input[i]<=90) || (input[i]>=97||input[i]<=122) ) || (input[i]==95) || (input[i]>=48||input[i]<=57))
+        {
+            cout<<"The given input  is an identifier"<<endl;
+
+        }
+        else
+        {
+            cout<<"The given input is not an identifier"<<endl;
+            break;
+        }
+    }
+    return 0;
+}
+
