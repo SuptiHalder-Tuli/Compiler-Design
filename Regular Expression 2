@@ -1,0 +1,46 @@
+// a(a+b)* + b //
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string input;
+    cout<<"Enter a input: "<<endl;
+    getline(cin,input);
+
+    if(input.empty())
+    {
+        cout<<"Accepted"<<endl;
+    }
+
+    if(input[0]=='a')
+    {
+        for(int i=0; i<input.length(); i++)
+        {
+            if(input[0]!='a' && input[i]!='b')
+            {
+                cout<<"Rejected"<<endl;
+                return 1;
+            }
+        }
+        cout<<"Accepted";
+    }
+
+    if(input[0]=='b')
+    {
+        for(int i=0; i<input.length(); i++)
+        {
+            if(input[i]!='b')
+            {
+                cout<<"Rejected"<<endl;
+                return 1;
+            }
+        }
+        cout<<"Accepted";
+    }
+
+
+    return 0;
+}
+
