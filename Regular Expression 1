@@ -1,0 +1,24 @@
+//a(a+b)*//
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string input;
+    cout<<"Enter a input: "<<endl;
+    getline(cin,input);
+
+    for(int i=0; i<=input.size(); i++)
+    {
+        if(input[0]!='a' && (input[1]!='a' || input[1]!='b'))
+        {
+            cout<<"Rejected";
+            return 1;
+        }
+
+    }
+    cout<<"Accepted";
+
+    return 0;
+}
