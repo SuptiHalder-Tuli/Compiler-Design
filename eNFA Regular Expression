@@ -1,0 +1,53 @@
+// (ba)*b*a[a+ba(a+b)]* //
+
+#include<iostream>
+using namespace std;
+
+bool checkOne(string input)
+{
+    for(int i=0; i<input.length(); i++)
+    {
+        if((input[0]!='b' && input[1]!='a') && (input[i]!='a'))
+        {
+
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
+
+ bool checkThree(string input)
+{
+    for(int i=0; i<input.length(); i++)
+    {
+        if(((input[0]!='b' && input[1]!='a') && (input[i]!='a')) && (input[i]!='a' && input[i+1]!='b' && input[i+2]!='a') )
+        {
+            cout<<"Rejected"<<endl;
+            return false;
+        }
+    }
+
+    return true;
+}
+int main()
+{
+    string input;
+    cout<<"Enter the input: "<<endl;
+    getline(cin,input);
+
+    if(checkOne(input))
+    {
+        cout<<"Accepted"<<endl;
+    }
+    else if(checkThree(input))
+    {
+        cout<<"Accepted"<<endl;
+    }
+
+
+
+    return 0;
+}
